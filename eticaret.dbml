@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="gorselegitim_org" Class="eticaretDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\gorselegitim_org.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="gorselegitim_orgConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Yorumlar" Member="Yorumlars">
+    <Type Name="Yorumlar">
+      <Column Name="YorumID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="urunad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Baslik" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Yorum" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Durum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vitrin" Member="Vitrins">
+    <Type Name="Vitrin">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VitrinResim" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="VitrinUrl" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Uyeler" Member="Uyelers">
+    <Type Name="Uyeler">
+      <Column Name="UyeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UyeAdSoyad" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UyeEposta" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sifre" Type="System.String" DbType="NVarChar(41)" CanBeNull="true" />
+      <Column Name="Adres" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="Gsm" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="EklemeTarihi" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Onay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sehir" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ilce" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Urunler" Member="Urunlers">
+    <Type Name="Urunler">
+      <Column Name="UrunID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UrunAd" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="UrunDetay" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UrunFiyat" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Kdv" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="indirim" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Taksit" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EklenmeTarihi" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Okunma" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Resim1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Resim2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Resim3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Video" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AKID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ALTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MarkaID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="YayinDumu" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Puan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Markalar_Urunler" Member="Markalar" ThisKey="MarkaID" OtherKey="MarkID" Type="Markalar" IsForeignKey="true" />
+      <Association Name="AnaKategoriler_Urunler" Member="AnaKategoriler" ThisKey="AKID" OtherKey="AKID" Type="AnaKategoriler" IsForeignKey="true" />
+      <Association Name="AltKategoriler_Urunler" Member="AltKategoriler" ThisKey="ALTID" OtherKey="ALTID" Type="AltKategoriler" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sepet" Member="Sepets">
+    <Type Name="Sepet">
+      <Column Name="SepetID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UyeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UrunID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EklemeTarihi" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Adet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Markalar" Member="Markalars">
+    <Type Name="Markalar">
+      <Column Name="MarkID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MarkaAd" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ALTID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Markalar_Urunler" Member="Urunlers" ThisKey="MarkID" OtherKey="MarkaID" Type="Urunler" />
+      <Association Name="AltKategoriler_Markalar" Member="AltKategoriler" ThisKey="ALTID" OtherKey="ALTID" Type="AltKategoriler" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Kargolar" Member="Kargolars">
+    <Type Name="Kargolar">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KargoAdi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Fiyat" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hesapnumaralari" Member="hesapnumaralaris">
+    <Type Name="hesapnumaralari">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Banka" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubeAdı" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SubeKodu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HesapTuru" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="HesapNo" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IBAn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AnaKategoriler" Member="AnaKategorilers">
+    <Type Name="AnaKategoriler">
+      <Column Name="AKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AKAD" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="AnaKategoriler_Urunler" Member="Urunlers" ThisKey="AKID" OtherKey="AKID" Type="Urunler" />
+      <Association Name="AnaKategoriler_AltKategoriler" Member="AltKategorilers" ThisKey="AKID" OtherKey="AKID" Type="AltKategoriler" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AltKategoriler" Member="AltKategorilers">
+    <Type Name="AltKategoriler">
+      <Column Name="ALTID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ALTAD" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AKID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="AltKategoriler_Urunler" Member="Urunlers" ThisKey="ALTID" OtherKey="ALTID" Type="Urunler" />
+      <Association Name="AltKategoriler_Markalar" Member="Markalars" ThisKey="ALTID" OtherKey="ALTID" Type="Markalar" />
+      <Association Name="AnaKategoriler_AltKategoriler" Member="AnaKategoriler" ThisKey="AKID" OtherKey="AKID" Type="AnaKategoriler" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sepeteekle" Method="sepeteekle">
+    <Parameter Name="UyeID" Parameter="uyeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UrunID" Parameter="urunID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EklemeTarihi" Parameter="eklemeTarihi" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="Adet" Parameter="adet" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sepetgetir" Method="sepetgetir">
+    <Parameter Name="UyeID" Parameter="uyeID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sepetgetirResult">
+      <Column Name="SepetID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UyeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UrunID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EklemeTarihi" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Adet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sepetguncelle" Method="sepetguncelle">
+    <Parameter Name="SepetID" Parameter="sepetID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Adet" Parameter="adet" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Sepetsil" Method="Sepetsil">
+    <Parameter Name="SepetID" Parameter="sepetID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.urunguncelle" Method="urunguncelle">
+    <Parameter Name="UrunID" Parameter="urunID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UrunAd" Parameter="urunAd" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="UrunDetay" Parameter="urunDetay" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="UrunFiyat" Parameter="urunFiyat" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Kdv" Parameter="kdv" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="indirim" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Taksit" Parameter="taksit" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Resim1" Parameter="resim1" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Resim2" Parameter="resim2" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Resim3" Parameter="resim3" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Video" Parameter="video" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="AKID" Parameter="aKID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ALTID" Parameter="aLTID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MarkaID" Parameter="markaID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="YayinDurumu" Parameter="yayinDurumu" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UyeKontrol" Method="UyeKontrol">
+    <Parameter Name="UyeEposta" Parameter="uyeEposta" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Sifre" Parameter="sifre" Type="System.String" DbType="NVarChar(41)" />
+    <Parameter Name="Onay" Parameter="onay" Type="System.Int32" DbType="Int" />
+    <ElementType Name="UyeKontrolResult">
+      <Column Name="UyeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UyeAdSoyad" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UyeEposta" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sifre" Type="System.String" DbType="NVarChar(41)" CanBeNull="true" />
+      <Column Name="Adres" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="Gsm" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="EklemeTarihi" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Onay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sehir" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ilce" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UyeleriGetir" Method="UyeleriGetir">
+    <ElementType Name="UyeleriGetirResult">
+      <Column Name="UyeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UyeAdSoyad" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UyeEposta" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sifre" Type="System.String" DbType="NVarChar(41)" CanBeNull="true" />
+      <Column Name="Adres" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="Gsm" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="EklemeTarihi" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Onay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sehir" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ilce" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VitrinEkle" Method="VitrinEkle">
+    <Parameter Name="VitrinResim" Parameter="vitrinResim" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="VitrinUrl" Parameter="vitrinUrl" Type="System.String" DbType="NVarChar(250)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VitrinGetir" Method="VitrinGetir">
+    <ElementType Name="VitrinGetirResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VitrinResim" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="VitrinUrl" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.VitrinSil" Method="VitrinSil">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

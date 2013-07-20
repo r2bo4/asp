@@ -1,0 +1,206 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Collections;
+
+namespace GESSDS
+{/*
+  * generik yapý
+  * asaðýdaki MyClass sýnýfý
+  * 
+  */
+    class MyClass<T>
+    {
+        public int sayi;
+        public T degisken;
+        public void EkranaYaz()
+        {
+            Console.WriteLine(sayi);
+            Console.WriteLine(degisken.ToString());
+        }
+        public void metod(T parametre)
+        {
+            Console.WriteLine(parametre.GetType().Name);
+            Console.WriteLine(parametre.GetHashCode());
+        }
+    }
+    class Urun
+    {
+        public string isim;
+        public int fiyat;
+        public Urun()
+        {
+
+        }
+        public Urun(string isim,int fiyat)
+        {
+            this.isim = isim;
+            this.fiyat = fiyat;
+        }
+        
+    }
+    class Dvd:Urun
+    {
+        public string tur;
+        public double sure;
+        public Dvd()
+        {
+
+        }
+        public Dvd(string isim, int fiyat,string tur,double sure):base(isim,fiyat)
+        {
+            this.tur = tur;
+            this.sure = sure;
+            this.fiyat = fiyat;
+            this.isim = isim;
+
+
+        }
+        public override string ToString()
+        {
+            return string.Format("{0} isimli dvd {1} turunde olup {2} dkdýr fiyatý ise :{3} YTL dir",isim,tur,sure,fiyat);
+        }
+        
+    }
+    /*
+     *T urun olsun die yani liste urun tipnde 
+     *deger alacak
+     *oradaki new() => new list<> diye yaptýgýmýz için
+     */
+    class Urunler<T> where T:Urun,new() 
+    {
+        List<T> liste;
+        public Urunler()
+        {
+            liste = new List<T>();
+        }
+        public void Ekle(T urun)
+        {
+            liste.Add(urun);
+        }
+        public void Cýkar(T urun)
+        {
+            liste.Remove(urun);
+        }
+        public void Cýkar(int index)
+        {
+            liste.RemoveAt(index);
+        }
+        public void Listeler()
+        {
+            foreach (var item in liste)
+            {
+                Console.WriteLine(item);
+            }
+        }
+        
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //2.ders
+           
+            Dvd dv = new Dvd("akel", 5000, "dvd", 60);
+            Dvd dv2 = new Dvd("ail", 25000, "bldvd", 260);
+            Dvd dv3 = new Dvd("feas", 58000, "cd", 125);
+            Dvd dv4 = new Dvd("fde", 96000, "cvf", 63);
+
+            Urunler<Urun> urler = new Urunler<Urun>();
+            //urler.Ekle(urn);
+            //urler.Ekle(urn1);
+            //urler.Ekle(urn2);
+            urler.Ekle(dv);
+            urler.Ekle(dv2);
+            urler.Ekle(dv3);
+            urler.Ekle(dv4);
+
+            urler.Listeler();
+
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //1 . ders
+            //List<string> kelimeler = new List<string>();
+            //kelimeler.Add("Hadi Gayri");
+            //kelimeler.Add("Çay Demle");
+            //kelimeler.Add(1.ToString());
+            //kelimeler.Add(false.ToString());
+            //foreach (string item in kelimeler)
+            //{
+            //    Console.WriteLine(" :"+item);
+                
+            //}
+            //List<bool> YesNo = new List<bool>();
+            //YesNo.Add(true);
+            //YesNo.Add(false);
+            ///*
+            // *for ile foreach ayný anlama geldi.
+            // *.count ile [i] yapýnca ayný anlama geldi
+            // *List dinamik diziden farklý olark 
+            // *boyutunu girmeden iþlem yapabiliyoruz
+            // *.Add(içine yazýyoruz) veri eklemek için.
+            // */
+            //for (int i = 0; i < YesNo.Count; i++)
+            //{
+            //    Console.WriteLine(YesNo[i]+" dýr");
+                
+            //}
+            //Console.WriteLine("*******\n");
+            //Dictionary<int, string> ger = new Dictionary<int, string>();
+            //ger.Add(3, "mahmut");
+            //ger.Add(6, "Namýk");
+            ///*
+            // *int veritabanýndaki gibi primerr key
+            // *ayný oldu mu hata veriyor
+            // *dictionart list alacaðý parametre tipinin 
+            // *çeþitliliðini saðlýyor
+            // */
+
+            
+            //Console.WriteLine("--------------------");
+            //foreach (var item in ger.Keys)
+            //{
+            //    Console.WriteLine("{0}---------->{1}",item,ger[item]);
+            //}
+            
+
+
+
+
+
+
+
+        }
+    }
+
+}

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 10.125" name="eticaret">
+  <DataContextMoniker Name="/eticaretDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a77ac193-02de-46cb-a81f-b45e2e4ec9c4" absoluteBounds="0.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/eticaretDataContext/Yorumlar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e38ba456-fab4-4735-b112-f4c01390b6f0" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ca6d7569-5d57-481f-8c5b-51127c755684" absoluteBounds="3.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/eticaretDataContext/Vitrin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf302b0d-ef9a-4ed9-8426-3d5ab6730ab6" absoluteBounds="3.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4989f173-af94-4b9a-83ad-8d00a45ef2bb" absoluteBounds="0.75, 6.75, 2, 2.9247054036458318">
+      <DataClassMoniker Name="/eticaretDataContext/Uyeler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d716932a-6a99-4a86-ac39-7a87985a1b3b" absoluteBounds="0.765, 7.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="57beeda7-3058-4d98-ae26-3e1c1e9b4f2b" absoluteBounds="9, 2.25, 2, 4.2708154296874987">
+      <DataClassMoniker Name="/eticaretDataContext/Urunler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1f1e898f-7e80-4f0e-817d-27389a85c98e" absoluteBounds="9.015, 2.71, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7c6b2109-3c7f-4889-86ba-82f5c69df405" absoluteBounds="3.75, 6.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/eticaretDataContext/Sepet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b9a61f3-37b1-4de8-8ad3-73205665253b" absoluteBounds="3.765, 7.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb0b2699-20ce-420a-b42c-ecffe4d14740" absoluteBounds="6.25, 3.625, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/eticaretDataContext/Markalar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="59bc21c9-d7bd-4141-898c-fa402f34b8b1" absoluteBounds="6.265, 4.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="181351cb-2c49-4022-96a5-05e19b462e98" absoluteBounds="6.75, 7.75, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/eticaretDataContext/Kargolar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40b8f52e-d54d-4df6-b3e3-f01015289547" absoluteBounds="6.765, 8.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="377e6872-b36c-46ab-a23b-bb21b17a587d" absoluteBounds="9.75, 7.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/eticaretDataContext/hesapnumaralari" />
+      <nestedChildShapes>
+        <elementListCompartment Id="237e6d8c-efd5-4c80-9bd6-2fb51aea417d" absoluteBounds="9.765, 8.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="29621096-048c-40f7-8fc0-2c0f904757e3" absoluteBounds="0.75, 3.75, 2, 1.193992513020834">
+      <DataClassMoniker Name="/eticaretDataContext/AnaKategoriler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac1e5a1b-41b4-43fb-8959-f70b7501e8c4" absoluteBounds="0.765, 4.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="571e1287-b488-4583-9170-75537824eb43" absoluteBounds="3.5, 3.625, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/eticaretDataContext/AltKategoriler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea027eac-faba-4228-83c5-0f29a41b5808" absoluteBounds="3.515, 4.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 4.31814697265625); (9 : 4.31814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/eticaretDataContext/Markalar/Markalar_Urunler" />
+      <nodes>
+        <classShapeMoniker Id="cb0b2699-20ce-420a-b42c-ecffe4d14740" />
+        <classShapeMoniker Id="57beeda7-3058-4d98-ae26-3e1c1e9b4f2b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 4.94399251302083); (1.75 : 5.7973046875); (9 : 5.7973046875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/eticaretDataContext/AnaKategoriler/AnaKategoriler_Urunler" />
+      <nodes>
+        <classShapeMoniker Id="29621096-048c-40f7-8fc0-2c0f904757e3" />
+        <classShapeMoniker Id="57beeda7-3058-4d98-ae26-3e1c1e9b4f2b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 5.0112939453125); (4.5 : 5.37304731640625); (9 : 5.37304731640625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/eticaretDataContext/AltKategoriler/AltKategoriler_Urunler" />
+      <nodes>
+        <classShapeMoniker Id="571e1287-b488-4583-9170-75537824eb43" />
+        <classShapeMoniker Id="57beeda7-3058-4d98-ae26-3e1c1e9b4f2b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.31814697265625); (6.25 : 4.31814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/eticaretDataContext/AltKategoriler/AltKategoriler_Markalar" />
+      <nodes>
+        <classShapeMoniker Id="571e1287-b488-4583-9170-75537824eb43" />
+        <classShapeMoniker Id="cb0b2699-20ce-420a-b42c-ecffe4d14740" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.34699625651042); (3.5 : 4.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/eticaretDataContext/AnaKategoriler/AnaKategoriler_AltKategoriler" />
+      <nodes>
+        <classShapeMoniker Id="29621096-048c-40f7-8fc0-2c0f904757e3" />
+        <classShapeMoniker Id="571e1287-b488-4583-9170-75537824eb43" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
